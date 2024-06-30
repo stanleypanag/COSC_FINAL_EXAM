@@ -8,7 +8,7 @@ if f(a) * f(b) > 0
     error('No root exists within the given interval.')
 end
 
-fprintf(' Iteration    a         b       f(a)       f(b)        c        f(c)       Updated      New Interval Width\n');
+fprintf(' Iteration    a         b       f(a)       f(b)        c        f(c)       Updated      New(b-a)\n');
 fprintf('----------------------------------------------------------------------------------------------------------\n');
 
 iteration = 0;
@@ -34,7 +34,7 @@ while (b - a) / 2 > tolerance    c = (a + b) / 2;
     iteration = iteration + 1;
 end
 
-root = (a + b) / 2;
+root = b;
 
 fprintf('----------------------------------------------------------------------------------------------------------\n');
 fprintf('The root is approximately %.4f\n', root);
